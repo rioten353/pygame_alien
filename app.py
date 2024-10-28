@@ -44,6 +44,8 @@ class Alien:
             self.ship.ship_moving_right = True
         elif event.key == pygame.K_LEFT:
             self.ship.ship_moving_left = True
+        elif event.key == pygame.K_q:
+            sys.exit()
 
     def _check_uo_down_event(self, event):
         if event.key == pygame.K_RIGHT:
@@ -51,7 +53,8 @@ class Alien:
         elif event.key == pygame.K_LEFT:
             self.ship.ship_moving_left = False
 
-    def _quit(self):
+    @staticmethod
+    def _quit():
         pygame.quit()
         sys.exit()
 
