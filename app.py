@@ -55,7 +55,3 @@ class Alien:
         pygame.quit()
         sys.exit()
 
-
-if __name__ == '__main__':
-    alien = Alien()
-    alien.run()
