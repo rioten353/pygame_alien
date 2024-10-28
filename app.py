@@ -12,7 +12,10 @@ class Alien:
         self.setting = Setting()
 
         pygame.display.set_caption(self.setting.title)
-        self.screen = pygame.display.set_mode((self.setting.screen_width, self.setting.screen_height))
+        self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+        self.setting.screen_width = self.screen.get_rect().width
+        self.setting.screen_height = self.screen.get_rect().height
+
         self.bg_color = self.setting.bg_color
 
         self.ship = Ship(self)
